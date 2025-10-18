@@ -76,7 +76,7 @@
 
 <html lang="<?php echo $idioma; ?>">
 <head>
-    <title><?php echo $t["producto"]; ?></title>
+    <title><?php echo $t["panel"]; ?></title>
 </head>
 <body>
     <div>
@@ -98,14 +98,14 @@
             <ul>
                 <?php foreach($productos as $producto): ?>
                 <li>
-                    <a href="producto.php?<?php echo urlencode($producto["id"]); ?>">
+                    <a href="producto.php?id=<?php echo urlencode($producto["id"]); ?>">
                         <?php echo htmlspecialchars($producto["nombre"]); ?>
                     </a>
                 </li>
                 <?php endforeach; ?>
             </ul>
             <?php else: ?>
-            <p><?php echo($t["no_productos"]); ?></p>>
+            <p><?php echo($t["no_productos"]); ?></p>
         <?php endif; ?>
     </div>
 </body>
