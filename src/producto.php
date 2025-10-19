@@ -69,7 +69,7 @@
             $partes = explode("|", $linea);
             
             // Verificar que la línea tenga el formato correcto
-            if(count($partes) >= 4){
+            if(count($partes) >= 5){
                 $id = trim($partes[0]);
                 
                 // Buscar el producto por ID
@@ -78,7 +78,8 @@
                         "id" => $id,
                         "nombre" => trim($partes[1]),
                         "precio" => trim($partes[2]),
-                        "descripcion" => trim($partes[3])
+                        "descripcion" => trim($partes[3]),
+                        "imagen" => trim($partes[4])
                     ];
                     break; // Si se encuentra, salir del bucle
                 }
@@ -100,6 +101,15 @@
 </head>
 <body>
     <h1><?php echo htmlspecialchars($producto_encontrado["nombre"]); ?></h1>
+
+    <!-- Imagen del producto -->
+    <?php if(isset($producto_encontrado["imagen"]) && !empty($producto_encontrado["imagen"])): ?>
+        <div style="margin: 20px 0;">
+            <img src="../assets/img/productos/<?php echo htmlspecialchars($producto_encontrado["imagen"]); ?>" 
+                 alt="<?php echo htmlspecialchars($producto_encontrado["nombre"]); ?>"
+                 style="max-width: 400px; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+        </div>
+    <?php endif; ?>
 
     <div><strong><?php echo $t["id_producto"]; ?>:</strong> <?php echo htmlspecialchars($producto_encontrado["id"]); ?></div>
     
