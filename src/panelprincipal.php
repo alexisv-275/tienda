@@ -5,7 +5,7 @@
     $_SESSION["clave"] = "clave1";
 
     if(!isset($_SESSION["nombre"]) && !isset($_SESSION["clave"])){
-        header("Location: panelprincipal.php");
+        header("Location: index.php");
     }
     // procesar cambio de idioma
     if(isset($_GET["lang"]) && in_array($_GET["lang"], ["es", "en"])){
