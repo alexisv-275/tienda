@@ -1,76 +1,29 @@
 <?php
     session_start();
+    require_once '../config/functions.php';
+    
     //validar sesion
     $_SESSION["nombre"] = "usuario1";
     $_SESSION["clave"] = "clave1";
 
     if(!isset($_SESSION["nombre"]) && !isset($_SESSION["clave"])){
         header("Location: index.php");
-    }
-    // procesar cambio de idioma
-    if(isset($_GET["lang"]) && in_array($_GET["lang"], ["es", "en"])){
-        setCookie("idioma_usuario", $_GET["lang"], time()+(30*24*60*60), "/");
-        
-        $idioma = $_GET["lang"];
-        
-        header("Location: panelprincipal.php");
+        exit();
     }
     
-    if(isset($_COOKIE["idioma_usuario"])){
-        $idioma = $_COOKIE["idioma_usuario"];
-    } else {
-        // default
-        $idioma = "es";
-        setCookie("idioma_usuario", $idioma, time() + (30*24*60*60), "/");
+    // Procesar cambio de idioma
+    if(isset($_GET["lang"])){
+        establecerIdiomaUsuario($_GET["lang"]);
+        header("Location: panelprincipal.php");
+        exit();
     }
-
-    $archivos_productos = [
-        "es" => "../assets/products/categorias_es.txt",
-        "en" => "../assets/products/categorias_en.txt"
-    ];
-
-    $titulos_pagina = [
-        "es" => "Lista de productos",
-        "en" => "Product list"
-    ];
-
-    $archivo_producto = $archivos_productos[$idioma] ?? $archivos_productos["es"];
-    $titulo_pagina = $titulos_pagina[$idioma] ?? $titulos_pagina["es"];
-
-    $textos = [
-        "es" => [
-            "bienvenido" => "Bievenido",
-            "panel" => "Panel principal",
-            "idioma" => "Configurar Idioma",
-            'productos' => 'Lista de productos',
-            "cerrar_sesion" => "Cerrar Sesion",
-            "no_productos" => "No hay productos disponibles"
-        ],
-
-        "en" => [
-            'bienvenido' => 'Welcome',
-            'panel' => 'Main Panel',
-            'idioma' => 'Set Up Language',
-            'productos' => 'Product List',
-            'cerrar_sesion' => 'Log Out',
-            'no_productos' => 'No products available'
-        ]
-        ];
-
-    $productos = [];
-    if(file_exists($archivo_producto)){
-        $lineas = file($archivo_producto, FILE_IGNORE_NEW_LINES | 
-        FILE_SKIP_EMPTY_LINES);
-        foreach($lineas as $linea){
-            $partes = explode("|", $linea);
-            $productos[] = [
-                "id" => trim($partes[0]),
-                "nombre" => trim($partes[1])
-            ];
-       }
-    }
-
-    $t = $textos[$idioma] ?? $textos["es"];
+    
+    // Obtener idioma actual
+    $idioma = obtenerIdiomaUsuario();
+    
+    // Cargar productos y textos
+    $productos = obtenerTodosLosProductos($idioma);
+    $t = cargarTextos('panelprincipal', $idioma);
 ?>
 
 

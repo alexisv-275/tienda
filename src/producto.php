@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require_once '../config/functions.php';
     
     //Validar sesion
     $_SESSION["nombre"] = "usuario1";
@@ -7,85 +8,26 @@
     
     if(!isset($_SESSION["nombre"]) && !isset($_SESSION["clave"])){
         header("Location:index.php");
+        exit();
     }
     
-    //Cargar archivos de productos segun idioma
-    $archivos_productos = [
-        "es" => "../assets/products/categorias_es.txt",
-        "en" => "../assets/products/categorias_en.txt"
-    ];
-
-    //Agregar textos mulidioma para la pagina de producto
-    $textos = [
-    "es" => [
-        "titulo" => "Detalles del Producto",
-        "id_producto" => "ID del Producto",
-        "precio" => "Precio",
-        "descripcion" => "Descripción",
-        "agregar_carrito" => "Agregar al carrito",
-        "volver" => "Volver al catálogo",
-        "cerrar_sesion" => "Cerrar sesión"
-    ],
-    "en" => [
-        "titulo" => "Product Details",
-        "id_producto" => "Product ID",
-        "precio" => "Price",
-        "descripcion" => "Description",
-        "agregar_carrito" => "Add to cart",
-        "volver" => "Back to catalog",
-        "cerrar_sesion" => "Log out"
-    ]];
-
+    // Obtener idioma actual
+    $idioma = obtenerIdiomaUsuario();
     
-    //1. Obtener preferencia de idioma
-    if(isset($_COOKIE["idioma_usuario"])){
-        $idioma = $_COOKIE["idioma_usuario"];
-    } else {
-        // default
-        $idioma = "es";
-        setCookie("idioma_usuario", $idioma, time() + (30*24*60*60), "/");
-    }
+    // Cargar textos
+    $t = cargarTextos('producto', $idioma);
     
-    $t = $textos[$idioma] ?? $textos["es"];
-
-    // 2. Obtener ID del producto desde URL
+    // Obtener ID del producto desde URL
     $producto_id = isset($_GET["id"]) ? trim($_GET["id"]) : null;
     
     // Validar que se recibió un ID
     if($producto_id === null || $producto_id === ""){
-        // Redirigir al panel si no hay ID
         header("Location: panelprincipal.php");
-        // exit();
+        exit();
     }
 
-    //3. Leer archivo de productos
-    $archivo_producto = $archivos_productos[$idioma] ?? $archivos_productos["es"];
-    $producto_encontrado = null;
-
-    if(file_exists($archivo_producto)){
-        $lineas = file($archivo_producto, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-        
-        foreach($lineas as $linea){
-            $partes = explode("|", $linea);
-            
-            // Verificar que la línea tenga el formato correcto
-            if(count($partes) >= 5){
-                $id = trim($partes[0]);
-                
-                // Buscar el producto por ID
-                if($id === $producto_id){
-                    $producto_encontrado = [
-                        "id" => $id,
-                        "nombre" => trim($partes[1]),
-                        "precio" => trim($partes[2]),
-                        "descripcion" => trim($partes[3]),
-                        "imagen" => trim($partes[4])
-                    ];
-                    break; // Si se encuentra, salir del bucle
-                }
-            }
-        }
-    }
+    // Buscar el producto
+    $producto_encontrado = obtenerProductoPorId($producto_id, $idioma);
 
     // Si no se encuentra el producto, redirigir
     if($producto_encontrado === null){
