@@ -1,14 +1,14 @@
-1|Pants|45.99|Comfortable cotton pants for daily use, available in various colors 
-2|Shirts|35.50|Formal long-sleeve shirts, perfect for work
-3|T-shirts|15.00|Casual 100% cotton t-shirts, ideal for everyday wear
-4|Tracksuits|65.00|Complete sportswear sets with modern and functional design
-5|Tights|28.75|Quick-dry sports tights, perfect for training
-6|Poles|32.00|Classic cotton polo shirts, elegant and versatile
-7|Sweatshirts|42.50|Hooded sweatshirts, comfortable and warm for winter
-8|Jackets|85.00|Waterproof jackets resistant to wind and rain
-9|Fleece linings|38.00|Thermal fleece linings, lightweight and warm
-10|Vests|48.99|Padded sleeveless vests, perfect for mid-season
-11|Coats|120.00|Long wool coats, elegant and warm for winter
-12|Sweaters|55.00|Soft knit sweaters, comfortable with classic style
-13|Ties|18.50|Silk ties with elegant designs for formal occasions
-14|Shoes|75.00|Genuine leather shoes, comfortable and durable for daily use
+1|Pants|45.99|Comfortable cotton pants for daily use, available in various colors|pants.jpg
+2|Shirts|35.50|Formal long-sleeve shirts, perfect for work|shirts.jpg
+3|T-shirts|15.00|Casual 100% cotton t-shirts, ideal for everyday wear|tshitrs.jpg
+4|Tracksuits|65.00|Complete sportswear sets with modern and functional design|tracksuit.avif
+5|Tights|28.75|Quick-dry sports tights, perfect for training|tights.jpg
+6|Poles|32.00|Classic cotton polo shirts, elegant and versatile|poles.webp
+7|Sweatshirts|42.50|Hooded sweatshirts, comfortable and warm for winter|sweatshirt.avif
+8|Jackets|85.00|Waterproof jackets resistant to wind and rain|jacket.jpg
+9|Fleece linings|38.00|Thermal fleece linings, lightweight and warm|fleece.webp
+10|Vests|48.99|Padded sleeveless vests, perfect for mid-season|vest.jpg
+11|Coats|120.00|Long wool coats, elegant and warm for winter|coat.avif
+12|Sweaters|55.00|Soft knit sweaters, comfortable with classic style|sweater.jpg
+13|Ties|18.50|Silk ties with elegant designs for formal occasions|tie.webp
+14|Shoes|75.00|Genuine leather shoes, comfortable and durable for daily use|shoe.jpg

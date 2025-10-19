@@ -1,14 +1,14 @@
-1|Pantalones|45.99|Pantalones de algodón cómodos para uso diario, disponibles en varios colores
-2|Camisas|35.50|Camisas formales de manga larga, perfectas para el trabajo
-3|Camisetas|15.00|Camisetas casuales de algodón 100%, ideales para el día a día
-4|Chandals|65.00|Conjuntos deportivos completos con diseño moderno y funcional
-5|Mallas|28.75|Mallas deportivas de secado rápido, perfectas para entrenar
-6|Polos|32.00|Polos clásicos de algodón, elegantes y versátiles
-7|Sudaderas|42.50|Sudaderas con capucha, cómodas y cálidas para el invierno
-8|Chaquetas|85.00|Chaquetas impermeables resistentes al viento y la lluvia
-9|Forros polares|38.00|Forros polares térmicos, ligeros y abrigados
-10|Chalecos|48.99|Chalecos acolchados sin mangas, perfectos para el entretiempo
-11|Abrigos|120.00|Abrigos largos de lana, elegantes y cálidos para el invierno
-12|Jerseys|55.00|Jerseys de punto suave, cómodos y con estilo clásico
-13|Corbatas|18.50|Corbatas de seda con diseños elegantes para ocasiones formales
-14|Zapatos|75.00|Zapatos de cuero genuino, cómodos y duraderos para uso diario
+1|Pantalones|45.99|Pantalones de algodón cómodos para uso diario, disponibles en varios colores|pants.jpg
+2|Camisas|35.50|Camisas formales de manga larga, perfectas para el trabajo|shirts.jpg
+3|Camisetas|15.00|Camisetas casuales de algodón 100%, ideales para el día a día|tshitrs.jpg
+4|Chandals|65.00|Conjuntos deportivos completos con diseño moderno y funcional|tracksuit.avif
+5|Mallas|28.75|Mallas deportivas de secado rápido, perfectas para entrenar|tights.jpg
+6|Polos|32.00|Polos clásicos de algodón, elegantes y versátiles|poles.webp
+7|Sudaderas|42.50|Sudaderas con capucha, cómodas y cálidas para el invierno|sweatshirt.avif
+8|Chaquetas|85.00|Chaquetas impermeables resistentes al viento y la lluvia|jacket.jpg
+9|Forros polares|38.00|Forros polares térmicos, ligeros y abrigados|fleece.webp
+10|Chalecos|48.99|Chalecos acolchados sin mangas, perfectos para el entretiempo|vest.jpg
+11|Abrigos|120.00|Abrigos largos de lana, elegantes y cálidos para el invierno|coat.avif
+12|Jerseys|55.00|Jerseys de punto suave, cómodos y con estilo clásico|sweater.jpg
+13|Corbatas|18.50|Corbatas de seda con diseños elegantes para ocasiones formales|tie.webp
+14|Zapatos|75.00|Zapatos de cuero genuino, cómodos y duraderos para uso diario|shoe.jpg
