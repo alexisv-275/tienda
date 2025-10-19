@@ -49,7 +49,7 @@
         <div style="margin: 20px 0;">
             <img src="../assets/img/productos/<?php echo htmlspecialchars($producto_encontrado["imagen"]); ?>" 
                  alt="<?php echo htmlspecialchars($producto_encontrado["nombre"]); ?>"
-                 style="max-width: 400px; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+                 style="width: 400px; height: 400px; object-fit: cover;">
         </div>
     <?php endif; ?>
 
