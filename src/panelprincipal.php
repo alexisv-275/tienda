@@ -1,12 +1,9 @@
 <?php
     session_start();
     require_once '../config/functions.php';
-    
-    //validar sesion
-    $_SESSION["nombre"] = "usuario1";
-    $_SESSION["clave"] = "clave1";
 
-    if(!isset($_SESSION["nombre"]) && !isset($_SESSION["clave"])){
+    //Verificar sesión
+    if(!isset($_SESSION["usuario"]) && !isset($_SESSION["contrasena"])){
         header("Location: index.php");
         exit();
     }
@@ -35,7 +32,7 @@
     <div>
         <div>
             <h1><?php echo $t["panel"]; ?></h1>
-            <p> <?php echo $t["bienvenido"] . ": " . $_SESSION["nombre"]; ?> </p>
+            <p> <?php echo $t["bienvenido"] . ": " . $_SESSION["usuario"]; ?> </p>
             <div> <?php echo $t["idioma"]; ?>
             <br>
             <a href="?lang=es">ES (ESPANOL)</a>
@@ -44,7 +41,7 @@
             </div>
         </div>
         <br>
-        <a href="cerrarsesion.php"> <?php echo $t["cerrar_sesion"]; ?></a>
+        <a href="index.php"> <?php echo $t["cerrar_sesion"]; ?></a>
         <br>
         <h2> <?php echo($t["productos"]) ?></h2>
         <?php if(count($productos)>0): ?>

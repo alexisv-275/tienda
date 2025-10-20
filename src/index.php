@@ -1,9 +1,21 @@
 <?php
+$usuario = $contrasena = "";
+$recordarme = false;
 
+if (isset($_COOKIE["c_recordarme"]) && $_COOKIE["c_recordarme"]){
+    $recordarme = true;
+    $usuario = $_COOKIE["c_usuario"];
+    $contrasena = $_COOKIE["c_contrasena"];
+}else{
+    if(isset($_COOKIE)){
+        foreach($_COOKIE as $name => $value){
+            setcookie($name, "", 1);
+        }
+    }
+}
+session_start();
+session_destroy();
 ?>
-
-
-
 
 
 
@@ -17,14 +29,14 @@
     <h1>Tienda Virtual</h1>
     <fieldset>
         <h2>LOGIN</h2>
-        <form action="panelprincipal.php" method="post">
+        <form action="acceso.php" method="post">
             Usuario:
-            <input type="text" name="usuario" required notnull> 
+            <input type="text" name="usuario" required notnull placeholder="Ingrese su usuario" value="<?php echo $usuario?>">
             <br>
-            Contraseña:
-            <input type="password" name="contrasena" required notnull>
+            Contraseña*:
+            <input type="password" name="contrasena" required notnull placeholder="Ingrese su contraseña" value="<?php echo $contrasena?>">
             <br>
-            <input type="checkbox" name="recordarme"> Recordar datos
+            <input type="checkbox" name="recordarme" <?php if($recordarme) echo "checked"; ?>> Recordarme
             <br>
             <input type="submit" value="Enviar">
         </form>

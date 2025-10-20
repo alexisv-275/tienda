@@ -1,12 +1,8 @@
 <?php
     session_start();
     require_once '../config/functions.php';
-    
-    //Validar sesion
-    $_SESSION["nombre"] = "usuario1";
-    $_SESSION["clave"] = "clave1";
-    
-    if(!isset($_SESSION["nombre"]) && !isset($_SESSION["clave"])){
+
+    if(!isset($_SESSION["usuario"]) && !isset($_SESSION["contrasena"])){
         header("Location:index.php");
         exit();
     }
@@ -72,6 +68,6 @@
     <br>
     <a href="panelprincipal.php"><?php echo $t["volver"]; ?></a>
     <br><br>
-    <a href="cerrarsesion.php"><?php echo $t["cerrar_sesion"]; ?></a>
+    <a href="index.php"><?php echo $t["cerrar_sesion"]; ?></a>
 </body> 
 </html>

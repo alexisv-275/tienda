@@ -2,6 +2,6 @@
 <html>
     <body>
         <h1>Carrito de compras</h1>
-        <a href="cerrarsesion.php">Cerrar session</a>
+        <a href="index.php">Cerrar sesión</a>
     </body>
 </html>
