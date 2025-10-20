@@ -5,6 +5,7 @@
     //Verificar sesión
     if(!isset($_SESSION["usuario"]) && !isset($_SESSION["contrasena"])){
         header("Location: index.php");
+        
         exit();
     }
     
@@ -36,10 +37,13 @@
             <div> <?php echo $t["idioma"]; ?>
             <br>
             <a href="?lang=es">ES (ESPANOL)</a>
-            /
+                |
             <a href="?lang=en">EN (ENGLISH)</a>
             </div>
         </div>
+        <br>
+        <a href="carrito.php"> <?php echo $t["Ir_al_carrito"]; ?></a>
+        <br>
         <br>
         <a href="index.php"> <?php echo $t["cerrar_sesion"]; ?></a>
         <br>

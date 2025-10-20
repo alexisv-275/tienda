@@ -103,7 +103,8 @@ function cargarTextos($pagina, $idioma) {
                 "idioma" => "Configurar Idioma",
                 'productos' => 'Lista de productos',
                 "cerrar_sesion" => "Cerrar Sesión",
-                "no_productos" => "No hay productos disponibles"
+                "no_productos" => "No hay productos disponibles",
+                'Ir_al_carrito' => "Ir al carrito"
             ],
             "en" => [
                 'bienvenido' => 'Welcome',
@@ -111,7 +112,8 @@ function cargarTextos($pagina, $idioma) {
                 'idioma' => 'Set Up Language',
                 'productos' => 'Product List',
                 'cerrar_sesion' => 'Log Out',
-                'no_productos' => 'No products available'
+                'no_productos' => 'No products available',
+                'Ir_al_carrito' => 'Go to Cart'
             ]
         ],
         'producto' => [
@@ -141,7 +143,8 @@ function cargarTextos($pagina, $idioma) {
                 "total" => "Total",
                 "continuar" => "Continuar comprando",
                 "finalizar" => "Finalizar compra",
-                "cerrar_sesion" => "Cerrar sesión"
+                "cerrar_sesion" => "Cerrar sesión",
+                "bienvenido_carrito" => "Bienvenido al carrito "
             ],
             "en" => [
                 "titulo" => "Shopping Cart",
@@ -149,7 +152,8 @@ function cargarTextos($pagina, $idioma) {
                 "total" => "Total",
                 "continuar" => "Continue shopping",
                 "finalizar" => "Checkout",
-                "cerrar_sesion" => "Log out"
+                "cerrar_sesion" => "Log out",
+                "bienvenido_carrito" => "Welcome to the cart "
             ]
         ]
     ];
