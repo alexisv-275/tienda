@@ -96,6 +96,6 @@ foreach ($items as $it) {
     <?php endif; ?>
 
     <p><a href="panelprincipal.php"><?php echo htmlspecialchars($t['continuar']); ?></a></p>
-    <p><a href="index.php"><?php echo htmlspecialchars($t['cerrar_sesion']); ?></a></p>
+    <p><a href="cerrarsesion.php"><?php echo htmlspecialchars($t['cerrar_sesion']); ?></a></p>
 </body>
 </html>

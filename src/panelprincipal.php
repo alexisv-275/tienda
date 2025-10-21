@@ -45,7 +45,7 @@
         <a href="carrito.php"> <?php echo $t["Ir_al_carrito"]; ?></a>
         <br>
         <br>
-        <a href="index.php"> <?php echo $t["cerrar_sesion"]; ?></a>
+        <a href="cerrarsesion.php"> <?php echo $t["cerrar_sesion"]; ?></a>
         <br>
         <h2> <?php echo($t["productos"]) ?></h2>
         <?php if(count($productos)>0): ?>

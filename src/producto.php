@@ -68,6 +68,6 @@
     <br>
     <a href="panelprincipal.php"><?php echo $t["volver"]; ?></a>
     <br><br>
-    <a href="index.php"><?php echo $t["cerrar_sesion"]; ?></a>
+    <a href="cerrarsesion.php"><?php echo $t["cerrar_sesion"]; ?></a>
 </body> 
 </html>

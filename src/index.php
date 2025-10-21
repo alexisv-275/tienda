@@ -13,8 +13,11 @@ if (isset($_COOKIE["c_recordarme"]) && $_COOKIE["c_recordarme"]){
         }
     }
 }
-session_start();
-session_destroy();
+
+
+if (isset($_COOKIE['idioma_usuario'])) {
+setcookie("idioma_usuario", "", time() - 3600, "/");
+}
 ?>
 
 
