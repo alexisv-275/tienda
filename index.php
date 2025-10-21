@@ -12,11 +12,9 @@ if (isset($_COOKIE["c_recordarme"]) && $_COOKIE["c_recordarme"]){
             setcookie($name, "", 1);
         }
     }
-}
-
-
-if (isset($_COOKIE['idioma_usuario'])) {
-setcookie("idioma_usuario", "", time() - 3600, "/");
+    if (isset($_COOKIE['idioma_usuario'])) {
+        setcookie("idioma_usuario", "", time() - 3600, "/");
+    }
 }
 ?>
 
