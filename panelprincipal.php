@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once '../config/functions.php';
+    require_once 'config/functions.php';
 
     //Verificar sesión
     if(!isset($_SESSION["usuario"]) && !isset($_SESSION["contrasena"])){

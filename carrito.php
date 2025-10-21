@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../config/functions.php';
+require_once 'config/functions.php';
 // Restringe acceso 
 if (!isset($_SESSION['usuario']) && !isset($_SESSION['contrasena'])) {
     header('Location:index.php');
@@ -76,7 +76,7 @@ foreach ($items as $it) {
                     <td>
                         <?php if (!empty($it['imagen'])): ?>
                             <img
-                                src="../assets/img/productos/<?php echo htmlspecialchars($it['imagen']); ?>"
+                                src="assets/img/productos/<?php echo htmlspecialchars($it['imagen']); ?>"
                                 alt="<?php echo htmlspecialchars($it['nombre']); ?>"
                                 width="120" height="120">
                         <?php endif; ?>

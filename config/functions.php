@@ -34,8 +34,8 @@ function establecerIdiomaUsuario($idioma) {
  */
 function obtenerArchivoProductos($idioma) {
     $archivos = [
-        "es" => "../assets/products/categorias_es.txt",
-        "en" => "../assets/products/categorias_en.txt"
+        "es" => "assets/products/categorias_es.txt",
+        "en" => "assets/products/categorias_en.txt"
     ];
     
     return $archivos[$idioma] ?? $archivos["es"];

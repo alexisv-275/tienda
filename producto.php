@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once '../config/functions.php';
+    require_once 'config/functions.php';
 
     if(!isset($_SESSION["usuario"]) && !isset($_SESSION["contrasena"])){
         header("Location:index.php");
@@ -43,7 +43,7 @@
     <!-- Imagen del producto -->
     <?php if(isset($producto_encontrado["imagen"]) && !empty($producto_encontrado["imagen"])): ?>
         <div style="margin: 20px 0;">
-            <img src="../assets/img/productos/<?php echo htmlspecialchars($producto_encontrado["imagen"]); ?>" 
+            <img src="assets/img/productos/<?php echo htmlspecialchars($producto_encontrado["imagen"]); ?>" 
                  alt="<?php echo htmlspecialchars($producto_encontrado["nombre"]); ?>"
                  style="width: 400px; height: 400px; object-fit: cover;">
         </div>
